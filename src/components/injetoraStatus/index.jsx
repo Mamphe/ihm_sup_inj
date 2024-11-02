@@ -9,6 +9,7 @@ const MaquinaInjetora = () => {
     useEffect(() => {
         socket.on('eventoAutomatico', (data) => {
             setStatus(data.valor);
+          console.log(data.valor);
         });
         
         // Cleanup on unmount
